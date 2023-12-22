@@ -13,9 +13,6 @@ from django.db.models.query import QuerySet
 from rest_framework import filters
 from rest_framework import permissions
 from rest_framework import fields
-from rest_framework import request
-from rest_framework import views
-from rest_framework import generics
 
 
 from django.contrib.contenttypes.models import ContentType
@@ -27,6 +24,9 @@ MYPY = False
 if MYPY:
     from django.db import models as django_models  # noqa: F401
     from typing import List  # noqa: F401
+    from rest_framework import request  # noqa: F401
+    from rest_framework import views  # noqa: F401
+    from rest_framework import generics  # noqa: F401
 
 
 class DRYPermissionFiltersBase(filters.BaseFilterBackend):
